@@ -1,0 +1,40 @@
+<article class="swiper__container">
+  <div class="swiper__container-header">
+    <h1 class="swiper__container-header-headline">{{ title }}</h1>
+  </div>
+
+  <div class="swiper__container-swip">
+    <swiper
+      [slidesPerView]="5"
+      [scrollbar]="false"
+      (swiper)="onSwiper($event)"
+      (slideChange)="onSlideChange()"
+      [navigation]="true"
+    >
+      <ng-template swiperSlide>
+        <div class="card">Slide 1</div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card">Slide 2</div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card">Slide 3</div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card">Slide 4</div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card">Slide 5</div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card">Slide 6</div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card">Slide 7</div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card">Slide 8</div>
+      </ng-template>
+    </swiper>
+  </div>
+</article>
