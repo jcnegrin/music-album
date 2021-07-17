@@ -1,0 +1,44 @@
+<aside class="menu__component">
+  <header class="menu__component-header">
+    <div class="menu__component-header-logo">
+      <img src="assets/imgs/logo_juan_2x.svg" alt="Personal Logo" />
+    </div>
+  </header>
+  <nav class="menu__component-navigation">
+    <ul class="menu__component-navigation-list">
+      <li
+        class="menu__component-navigation-list-item"
+        [ngClass]="{ 'menu__component-navigation-list-item--active': true }"
+      >
+        <a class="menu__component-navigation-list-item-link">
+          <mat-icon class="menu__component-navigation-list-item-link-icon"
+            >grid_view_outline</mat-icon
+          >
+          <span class="menu__component-navigation-list-item-link-text"
+            >Listen Now</span
+          >
+        </a>
+      </li>
+      <li class="menu__component-navigation-list-item">
+        <a class="menu__component-navigation-list-item-link">
+          <mat-icon class="menu__component-navigation-list-item-link-icon"
+            >library_music_outline</mat-icon
+          >
+          <span class="menu__component-navigation-list-item-link-text"
+            >Albums</span
+          >
+        </a>
+      </li>
+      <li class="menu__component-navigation-list-item">
+        <a class="menu__component-navigation-list-item-link">
+          <mat-icon class="menu__component-navigation-list-item-link-icon"
+            >subscriptions_outline</mat-icon
+          >
+          <span class="menu__component-navigation-list-item-link-text"
+            >Artists</span
+          >
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
