@@ -8,7 +8,8 @@
     <ul class="menu__component-navigation-list">
       <li
         class="menu__component-navigation-list-item"
-        [ngClass]="{ 'menu__component-navigation-list-item--active': true }"
+        routerLink="/listen-now"
+        routerLinkActive="menu__component-navigation-list-item--active"
       >
         <a class="menu__component-navigation-list-item-link">
           <mat-icon class="menu__component-navigation-list-item-link-icon"
@@ -19,7 +20,11 @@
           >
         </a>
       </li>
-      <li class="menu__component-navigation-list-item">
+      <li
+        class="menu__component-navigation-list-item"
+        routerLink="/albums"
+        routerLinkActive="menu__component-navigation-list-item--active"
+      >
         <a class="menu__component-navigation-list-item-link">
           <mat-icon class="menu__component-navigation-list-item-link-icon"
             >library_music_outline</mat-icon
@@ -29,7 +34,11 @@
           >
         </a>
       </li>
-      <li class="menu__component-navigation-list-item">
+      <li
+        class="menu__component-navigation-list-item"
+        routerLink="/artists"
+        routerLinkActive="menu__component-navigation-list-item--active"
+      >
         <a class="menu__component-navigation-list-item-link">
           <mat-icon class="menu__component-navigation-list-item-link-icon"
             >subscriptions_outline</mat-icon
