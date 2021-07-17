@@ -12,6 +12,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./albums/albums.module').then((m) => m.AlbumsModule),
   },
+  {
+    path: 'artists',
+    loadChildren: () =>
+      import('./artists/artists.module').then((m) => m.ArtistsModule),
+  },
   { path: '', redirectTo: '/listen-now', pathMatch: 'full' },
 ];
 
