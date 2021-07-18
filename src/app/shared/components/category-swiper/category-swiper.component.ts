@@ -6,6 +6,7 @@ import SwiperCore, {
   Scrollbar,
   A11y,
 } from 'swiper/core';
+import { Item } from '../../models/Items';
 
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -18,6 +19,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 })
 export class CategorySwiperComponent implements OnInit {
   @Input() title: string = '';
+  @Input() items: Item[] = [];
 
   constructor() {}
 

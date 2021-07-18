@@ -3,7 +3,10 @@
     <h1 class="swiper__container-header-headline">{{ title }}</h1>
   </div>
 
-  <div class="swiper__container-swip">
+  <div
+    class="swiper__container-swip"
+    *ngIf="items.length > 0; else templateName"
+  >
     <swiper
       [slidesPerView]="5"
       [scrollbar]="false"
@@ -11,30 +14,14 @@
       (slideChange)="onSlideChange()"
       [navigation]="true"
     >
-      <ng-template swiperSlide>
-        <div class="card">Slide 1</div>
-      </ng-template>
-      <ng-template swiperSlide>
-        <div class="card">Slide 2</div>
-      </ng-template>
-      <ng-template swiperSlide>
-        <div class="card">Slide 3</div>
-      </ng-template>
-      <ng-template swiperSlide>
-        <div class="card">Slide 4</div>
-      </ng-template>
-      <ng-template swiperSlide>
-        <div class="card">Slide 5</div>
-      </ng-template>
-      <ng-template swiperSlide>
-        <div class="card">Slide 6</div>
-      </ng-template>
-      <ng-template swiperSlide>
-        <div class="card">Slide 7</div>
-      </ng-template>
-      <ng-template swiperSlide>
-        <div class="card">Slide 8</div>
+      <ng-template swiperSlide *ngFor="let item of items">
+        <div class="card">{{ item.label }}</div>
       </ng-template>
     </swiper>
   </div>
+  <ng-template #templateName>
+    <div class="swiper__container-empty">
+      <span>Empty List</span>
+    </div>
+  </ng-template>
 </article>
