@@ -1,1 +1,27 @@
-<p>artists works!</p>
+<section class="artists__component">
+  <div class="artists__component-header">
+    <span class="artists__component-header-button" (click)="openCreateDialog()"
+      ><mat-icon>add_outline</mat-icon> Add New</span
+    >
+  </div>
+  <div class="artists__component-grid">
+    <div class="artists__component-grid-item" *ngFor="let item of artists">
+      <div
+        class="artists__component-grid-item-image"
+        [ngStyle]="{ 'background-image': 'url(' + item.photoUrl + ')' }"
+      >
+        <div
+          class="artists__component-grid-item-image-delete"
+          (click)="onDeleteArtist(item)"
+        >
+          <mat-icon>close_outline</mat-icon>
+        </div>
+      </div>
+      <div class="artists__component-grid-item-info">
+        <span class="artists__component-grid-item-info-title">{{
+          item.name | uppercase
+        }}</span>
+      </div>
+    </div>
+  </div>
+</section>

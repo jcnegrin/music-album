@@ -27,4 +27,8 @@ export class ArtistsService {
   public addArtists(artists: Artist[]): Observable<Artist[]> {
     return this.http.post<Artist[]>(this.API_URL + 'artist', artists);
   }
+
+  public deleteArtist(id: string) {
+    return this.http.delete<Artist>(this.API_URL + 'artist/' + id);
+  }
 }

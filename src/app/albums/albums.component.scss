@@ -3,8 +3,9 @@
   height: 100%;
 
   &-grid {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 16px;
     row-gap: 16px;
   }

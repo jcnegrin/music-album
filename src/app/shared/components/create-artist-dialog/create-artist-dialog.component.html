@@ -1,0 +1,47 @@
+<h2 mat-dialog-title>Add new artist</h2>
+<mat-dialog-content
+  >Here you can add a new artist to artist list
+  <form class="dialog__form" [formGroup]="artistForm">
+    <mat-form-field class="dialog__form-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        placeholder="Ex. David Guetta"
+        value=""
+        formControlName="name"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field class="dialog__form-full-width" appearance="fill">
+      <mat-label>Photo URL</mat-label>
+      <input
+        matInput
+        placeholder="Photo URL"
+        value=""
+        formControlName="photoUrl"
+      />
+    </mat-form-field>
+    <mat-form-field class="dialog__form-full-width" appearance="fill">
+      <mat-label>Birth date</mat-label>
+      <input
+        matInput
+        placeholder="Ex. 31-12-1995"
+        value=""
+        formControlName="birthdate"
+      />
+    </mat-form-field>
+    <mat-form-field class="dialog__form-full-width" appearance="fill">
+      <mat-label>Death date</mat-label>
+      <input
+        matInput
+        placeholder="Ex. 31-12-2015"
+        value=""
+        formControlName="deathDate"
+      />
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button type="submit" mat-button (click)="onSubmit()">Add</button>
+</mat-dialog-actions>

@@ -9,9 +9,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from './shared/modules/shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
+import { CreateArtistDialogComponent } from './shared/components/create-artist-dialog/create-artist-dialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent],
+  declarations: [AppComponent, MenuComponent, CreateArtistDialogComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -20,8 +22,10 @@ import { MatTableModule } from '@angular/material/table';
     MatIconModule,
     SharedModule,
     MatTableModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [CreateArtistDialogComponent],
 })
 export class AppModule {}
